@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "835113242043",
+    "project_id": "caps-dswms",
+    "storage_bucket": "caps-dswms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835113242043:android:c018c0c834530e0282089e",
+        "android_client_info": {
+          "package_name": "com.example.capstone_dswms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835113242043-jgfgcc3tg92kqndtku06bdu3mk2mfa39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClMLsP6Q6QwN9D-0XDfqFbkUnnKL5AN6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835113242043-jgfgcc3tg92kqndtku06bdu3mk2mfa39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

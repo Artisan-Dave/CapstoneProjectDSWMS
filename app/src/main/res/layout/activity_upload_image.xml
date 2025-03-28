@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".uploadImage">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivchoosepic"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:src="@drawable/baseline_upload_24" />
+
+        </LinearLayout>
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:hint="Location"-->
+        <!--                android:id="@+id/etcaption"/>-->
+
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--        <EditText-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:id="@+id/etcaption"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="55dp"-->
+        <!--            android:hint="Location"-->
+        <!--            android:textColorHint="@color/blue"-->
+        <!--            android:textColor="@color/blue"-->
+        <!--            android:background="@drawable/et_bg"-->
+        <!--            android:padding="10dp"/>-->
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:theme="@style/SpinnerTheme"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/spinner_items"
+            android:popupBackground="@drawable/spinner_dropdown_bg"
+            android:spinnerMode="dropdown" />
+
+
+        <Button
+            android:id="@+id/btnupload"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/blue"
+            android:text="UPLOAD"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

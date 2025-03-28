@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChangenumberFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tvusername"
+        android:text="Username"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:gravity="center"/>
+
+        <EditText
+            android:layout_marginTop="30dp"
+            android:id="@+id/etnewnumber"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:maxLength="15"
+            android:hint="Mobile Number"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:background="@drawable/et_bg"
+            android:inputType="number"
+            android:padding="10dp"/>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/blue"
+            android:textStyle="bold"
+            android:id="@+id/btnsubmit"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="SUBMIT"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:text="Note: Please enter new mobile number"/>
+
+    </LinearLayout>
+
+</FrameLayout>

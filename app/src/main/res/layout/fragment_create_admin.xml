@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CreateAdminFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/etfirstname"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/blue"
+            android:layout_height="55dp"
+            android:hint="First Name"
+            android:textColor="@color/blue"
+            android:digits="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ."
+            android:background="@drawable/et_bg"
+            android:padding="10dp"/>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Last Name"-->
+<!--                android:id="@+id/etlastname"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/etlastname"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Last Name"
+            android:digits="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ."
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:background="@drawable/et_bg"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etnumber"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/et_bg"
+            android:hint="Account number"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/etpass"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Password"
+            android:textColorHint="@color/blue"
+            android:maxLength="15"
+            android:textColor="@color/blue"
+            android:background="@drawable/et_bg"
+            android:padding="10dp"/>
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/etconpass"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Re-enter Password"
+            android:textColorHint="@color/blue"
+            android:textColor="@color/blue"
+            android:background="@drawable/et_bg"
+            android:padding="10dp"/>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/blue"
+            android:textStyle="bold"
+            android:id="@+id/btnregister"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="REGISTER"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>

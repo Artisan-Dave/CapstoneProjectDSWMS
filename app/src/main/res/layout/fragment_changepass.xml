@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChangepasswordFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvusername"
+            android:text="username"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:layout_gravity="center"/>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Old password"-->
+<!--                android:id="@+id/etoldpass"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/etoldpass"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Old Password"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:background="@drawable/et_bg"
+            android:padding="10dp"/>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            app:passwordToggleEnabled="true"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="New Password"-->
+<!--                android:id="@+id/etnewpass"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/etnewpass"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="New Password"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:background="@drawable/et_bg"
+            android:padding="10dp"/>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/blue"
+            android:textStyle="bold"
+            android:id="@+id/btnsubmit"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="SUBMIT"/>
+
+    </LinearLayout>
+
+</FrameLayout>

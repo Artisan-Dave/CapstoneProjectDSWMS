@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trash Bin 1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/tvtrashbin1"
+            android:textColor="@color/blue"
+            android:layout_gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarGreen"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:rotation="-90"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular_progress_bar_green" />
+
+        <TextView
+            android:id="@+id/tvPercentageGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-115dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="0"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarYellow"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:rotation="-90"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular_progress_bar_yellow" />
+
+        <TextView
+            android:id="@+id/tvPercentageYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-115dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="0"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarRed"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:rotation="-90"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular_progress_bar_red" />
+
+        <TextView
+            android:id="@+id/tvPercentageRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-115dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="0"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/linearlocation"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivaddlocation"
+                android:layout_width="43dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_add_location_alt_24" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/ivlocation"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/baseline_location_on_24"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/ivcollectors"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/baseline_person_24"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

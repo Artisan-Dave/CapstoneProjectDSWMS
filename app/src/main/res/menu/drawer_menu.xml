@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single"
+        android:orderInCategory="10">
+            <item android:id="@+id/home"
+                android:title="@string/home"
+                android:icon="@drawable/baseline_home_24"/>
+    </group>
+            <item
+                android:title="Profile"
+                android:orderInCategory="15">
+                <menu>
+                    <group android:checkableBehavior="single">
+                        <item android:id="@+id/changenumber"
+                                android:title="Change Number"
+                                android:icon="@drawable/baseline_phone_24"/>
+
+                        <item android:id="@+id/changepass"
+                                android:title="Change Password"
+                                android:icon="@drawable/baseline_lock_24"/>
+                    </group>
+                </menu>
+            </item>
+    <item
+        android:title="User management"
+        android:orderInCategory="14">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/createadmin"
+                    android:title="Add Admin Account"
+                    android:icon="@drawable/baseline_person_add_24"/>
+
+                <item android:id="@+id/users"
+                    android:title="@string/users"
+                    android:icon="@drawable/baseline_person_24"/>
+
+            </group>
+        </menu>
+    </item>
+    <group
+        android:checkableBehavior="single"
+        android:orderInCategory="20">
+        <item android:id="@+id/exit"
+            android:title="Logout"
+            android:icon="@drawable/baseline_exit_to_app_24"
+            android:orderInCategory="20"/>
+    </group>
+
+</menu>

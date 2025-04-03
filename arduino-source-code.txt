@@ -1,0 +1,96 @@
+#include <NewPing.h> // Library for ultrasonic sensor
+#include <Servo.h>
+
+#define TRIGGER_PIN 12
+#define ECHO_PIN 11
+#define MAX_DISTANCE 72 // Max distance in cm (height of the trashbin)
+#define SERVO_PIN 7
+#define BUTTON_PIN 8
+const int ledPin1 = 3;
+const int ledPin2 = 4;
+const int ledPin3 = 5;
+
+Servo servo;
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+bool buttonPressed = false; // flag variable to indicate if the button is pressed
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  servo.attach(SERVO_PIN);
+  servo.write(0);
+}
+
+void loop() {
+  delay(500); // Delay for stability
+  
+  unsigned int distance = sonar.ping_cm(); // Get distance in cm
+  float fillPercentage; 
+
+  Serial.print(distance);
+
+  delay(1000);
+
+   if (distance <= MAX_DISTANCE && distance > 0) {
+    fillPercentage = 100.0 - (float(distance) / MAX_DISTANCE) * 100.0;
+       // Convert fill percentage to a string and send it with "P:" prefix
+      Serial.print("P:");
+      Serial.println(String(fillPercentage, 2)); // Convert to string with 2 decimal places  
+   }
+   
+    // Check if garbage level is almost full
+  if (fillPercentage >= 95.0) {
+    // Rotate servo motor to indicate almost full garbage level
+    servo.write(90);
+    
+//    delay(1000);
+    digitalWrite(ledPin2,LOW);
+    digitalWrite(ledPin1,LOW);
+    digitalWrite(ledPin3,HIGH);
+    delay(1000);
+    digitalWrite(ledPin3,LOW);
+    
+  }else if(fillPercentage < 50.0){
+      digitalWrite(ledPin3,LOW);
+      digitalWrite(ledPin2,LOW);
+      
+      digitalWrite(ledPin1,HIGH);
+      delay(1000);
+      digitalWrite(ledPin1,LOW);
+      
+    }
+
+    else if(fillPercentage >= 50.0 && fillPercentage < 90.0){
+      digitalWrite(ledPin3,LOW);
+      digitalWrite(ledPin1,LOW);
+      
+      digitalWrite(ledPin2,HIGH);
+      delay(1000);
+      digitalWrite(ledPin2,LOW);
+      
+    }
+  
+  // Check if the button is pressed
+  if (digitalRead(BUTTON_PIN) == LOW) {
+    // Button is pressed, set the flag
+    buttonPressed = true;
+    digitalWrite(TRIGGER_PIN, LOW);
+
+//    delay(500);
+    
+    // Rotate the servo back to 0 degrees
+    servo.write(0);
+    
+
+    // Add a short delay to avoid false button press detection due to bouncing
+    delay(500);
+  } else {
+    // Button is released, reset the flag
+    buttonPressed = false;
+  }
+
+
+}
